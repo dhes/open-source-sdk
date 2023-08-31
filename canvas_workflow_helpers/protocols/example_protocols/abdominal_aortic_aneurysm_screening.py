@@ -1,7 +1,7 @@
-# This protocol starts as a copy of the breast cancer screening protocol. 
-# Most (actually all, as of this comment on 2023-08-23) is the breast cancer screening protocol. 
-# I will be working on this over the next few days)
-# This message will persist until the first draft is finished. 
+# This protocol started as a copy of the breast cancer screening protocol. 
+# As of 2023-08-30 it is a first draft. 
+# I have many questions about how this works. 
+# This code is certainly not functional, has not been tested and should not be applied in productions. 
 
 from typing import cast
 
