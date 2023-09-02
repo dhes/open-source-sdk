@@ -29,7 +29,13 @@
 # XRayStudyAllInclusive. 
 # Since that's consistent I'll throw aorta US in there. 
 
-
+# need code for aneurysm repair
+# code "Had AAA repair": '429205001' from "SNOMED-CT" display 'History of repair of aneurysm of abdominal aorta (situation)'
+# and for existing aneurysm
+# valueset "Has AAA": 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1047.17'
+# This value set does not include femoral aneurysm. 
+# This value set is in the AbdominalAorticAneurysm class of v2017 of the
+# canvas workflow kit. 
 
 from typing import cast
 
