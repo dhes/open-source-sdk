@@ -1,7 +1,28 @@
 # This protocol started as a copy of the breast cancer screening protocol. 
 # As of 2023-08-30 it is a first draft. 
 # I have many questions about how this works. 
-# This code is certainly not functional, has not been tested and should not be applied in productions. 
+# This code is certainly not functional, has not been tested and should not 
+# be applied in productions. 
+
+# In canvas_workflow_helpers/value_sets/v2021/diagnosis.py there is a CurrentTobaccoSmoker value set. 
+# I have reviewed the codes in comparison with the vasc web site. 
+# These vasc codes were left out: 450811000124104, 450821000124107. I'm going to work with 
+# what's there as least for now. 
+
+# I'll need to add a former smoker and never smoker codes. 
+# Will get it from my AAA CQL. 
+# There is a former smoker snomed code in result.py, but it is part of Tobacco Non-User Value Set
+# which won't work for me. 
+# I'll have to refactor Tobacco Non-User and create Former Smoker. 
+# I'm going to just remove 266919005 from Tobacco Non-User and 
+# place it as a single value in new Never Smoker value set. 
+# class NeverSmoker(ValueSet):
+#     VALUE_SET_NAME = 'Never Smoker'
+#     SNOMEDCT = {'266919005'}
+# First examine the vasc file for Tobacco Non-User 
+# code "Never smoker": '266919005' from "SNOMED-CT" display 'Never smoked tobacco (finding)'
+# code "Former smoker": '8517006' from "SNOMED-CT" display 'Ex-smoker (finding)'
+
 
 from typing import cast
 
@@ -23,7 +44,8 @@ from canvas_workflow_kit.value_set.specials import AaaScreeningUltrasound # TO D
 # https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleId=55071
 # https://braccoreimbursement.com/bracco-reimbursement-faq/proper-coding-for-ultrasound-to-rule-out-or-follow-up-on-aaa-plus-other-cpt-codes-for-related-other-organ-and-duplex-studies-2/
 # https://loinc.org/79374-5/
-# I'm stuck here. I don't know where to create a special value set. Many of the values can be found in my repository *abdominal-aortic-aneurysm-screening*. 
+# I'm stuck here. I don't know where to create a special value set. Many of the values can be found 
+# in my repository *abdominal-aortic-aneurysm-screening*. 
 
 # flake8: noqa
 from canvas_workflow_kit.value_set.v2021 import (
