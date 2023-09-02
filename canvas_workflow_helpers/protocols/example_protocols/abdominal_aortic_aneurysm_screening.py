@@ -23,6 +23,13 @@
 # code "Never smoker": '266919005' from "SNOMED-CT" display 'Never smoked tobacco (finding)'
 # code "Former smoker": '8517006' from "SNOMED-CT" display 'Ex-smoker (finding)'
 
+# imaging studies so far seem to be found in diagnosis.py like 
+# DexaDualEnergyXrayAbsorptiometryBoneDensityForUrologyCare,  BoneScan, 
+# DxaDualEnergyXrayAbsorptiometryScan, EjectionFraction, Mammography, and
+# XRayStudyAllInclusive. 
+# Since that's consistent I'll throw aorta US in there. 
+
+
 
 from typing import cast
 
