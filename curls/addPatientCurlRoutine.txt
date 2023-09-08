@@ -1,0 +1,25 @@
+curl -i --location 'https://fhir-heslingamd-preview.canvasmedical.com/Patient' \
+     --header 'Authorization: Bearer L7LPFuapLZeGWChLnU3Nqobu10YM3kck' \
+     --header 'Content-Type: application/json' \
+     --data '{
+        "resourceType": "Patient",
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+                "valueCode": "M"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "family": "Bahar",
+                "given": [
+                    "Issam",
+                    "Khuzaimah"
+                ]
+            }
+        ],
+        "birthDate": "1949-11-13"
+    }'
+

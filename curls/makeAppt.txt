@@ -1,0 +1,40 @@
+curl -i --location 'https://fhir-heslingamd-preview.canvasmedical.com/Appointment' \
+  --header 'Authorization: Bearer L7LPFuapLZeGWChLnU3Nqobu10YM3kck' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "resource": {
+        "resourceType": "Appointment",
+        "status": "booked",
+        "appointmentType": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "448337001",
+                    "display": "Telemedicine consultation with patient (procedure)"
+                }
+            ]
+        },
+        "description": "Weekly check-in.",
+        "supportingInformation" : [
+          {
+            "reference" : "Location/1"
+          }
+        ],
+        "start": "2022-02-19T13:30:00.000Z",
+        "end": "2022-02-19T14:00:00.000Z",
+        "participant": [
+            {
+                "actor": {
+                    "reference": "Practitioner/e766816672f34a5b866771c773e38f3c"
+                },
+                "status": "accepted"
+            },
+            {
+                "actor": {
+                    "reference": "Patient/87d14dc06de4479aa565a98d4fbac450"
+                },
+                "status": "accepted"
+            }
+        ]
+    }
+}'

@@ -1,0 +1,3 @@
+curl --location 'https://fhir-heslingamd-preview.canvasmedical.com/Practitioner' \
+--header 'Content-Type: application/fhir+json' \
+--header 'Authorization: Bearer L7LPFuapLZeGWChLnU3Nqobu10YM3kck' | jq
