@@ -1,0 +1,4 @@
+curl --request GET \
+     --url https://fhir-heslingamd-preview.canvasmedical.com/Observation \
+     --header 'Authorization: Bearer L7LPFuapLZeGWChLnU3Nqobu10YM3kck' \
+     --header 'accept: application/json'
